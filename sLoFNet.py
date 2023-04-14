@@ -219,6 +219,7 @@ class sLoFNet:
         """
         if self.optimized:
             model = self.optimized
+            model.compile(optimizer="adam", loss = self.loss)
         else: 
             model = self.model_dense
             model.compile(optimizer="adam", loss = self.loss)
